@@ -12,3 +12,4 @@
 + Home Credit and Russian standard banks, credit advisor (2006) Russia.
 + Consultant Plus, system training (2004) Russia.
 + Kama State Academy of Engineering and Economics, database design and creation using Access DBMS (2002) Russia.
+8. English language A2. also deutsch A1, turkish B2.
