@@ -38,3 +38,27 @@
    + Kama State Academy of Engineering and Economics, database design and creation using Access DBMS (2002)
    + Kama State Academy of Engineering and Economics (1999-2004), Applied Information Science in Economics
 1. I studied English at school, at the institute, and at the courses. The practice was when I worked in a hotel at the reception and guestrelation.
+1. Code example
+
+```
+
+    import React from 'react';
+    import { NavLink } from 'react-router-dom';
+    import { PATH } from '../../constants/constants';
+    import './header.css';
+   
+      class Header extends React.Component {
+        render() {
+          return (
+            <header className="header">
+              <NavLink to={PATH.MAIN}>Main</NavLink>
+              <NavLink to={PATH.FORM}>Form</NavLink>
+              <NavLink to={PATH.ABOUT}>About Us</NavLink>
+              <NavLink to={PATH.OTHER}>404</NavLink>
+            </header>
+          );
+        }
+      }
+      export default Header;
+         
+```
