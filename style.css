@@ -1,3 +1,10 @@
+:root {
+--primary-color: #ffffff;
+--bg-color: #f5eae6;
+--font-color:#000000;
+--el-color: #6e9b9b;
+--sec-color: #e7c9bb;
+}
 *,
 *::after,
 *::before {
@@ -7,7 +14,7 @@
 }
 
 body {
-  background-color: #f5eae6;
+  background-color: var(--bg-color);
   font-size: 14px;
   font-family: 'Lato', sans-serif;
   color: #000000;
@@ -33,7 +40,7 @@ h3 {
 
 h4 {
   text-transform: uppercase;
-  color: #6e9b9b;
+  color: var(--el-color);
 }
 
 p {
@@ -50,7 +57,7 @@ aside {
   padding: 0 20px;
   margin-top: -56px;
   margin-left: 60px;
-  background-color: #6e9b9b;
+  background-color: var(--el-color);
 }
 
 aside figure {
@@ -59,8 +66,8 @@ aside figure {
 
 aside>*,
 a {
-  color: #ffffff;
-  fill: #ffffff;
+  color: var(--primary-color);
+  fill: var(--primary-color);
 }
 
 aside h3 {
@@ -86,7 +93,7 @@ span::after {
   height: 0;
   position: absolute;
   transition: all 0.2s linear;
-  background: #6e9b9b;
+  background: var(--el-color);
 }
 
 .nav-link::before,
@@ -96,7 +103,7 @@ span::after {
   height: 2px;
   position: absolute;
   transition: all 0.2s linear;
-  background: #6e9b9b;
+  background: var(--el-color);
 }
 
 .nav-link:hover::before,
@@ -166,13 +173,13 @@ footer {
   flex-direction: row;
   position: absolute;
   width: 100%;
-  background-color: #e7c9bb;
+  background-color: var(--sec-color);
   height: 250px;
   padding: 0 40px;
 }
 
 .heading-name {
-  color: #000000;
+  color: var(--font-color);
   margin: 5px 0;
 }
 
@@ -195,7 +202,7 @@ footer {
 
 h3::before {
   content: '➤';
-  color: #6e9b9b;
+  color: var(--el-color);
   font-size: 20px;
   padding-right: 7px;
 }
@@ -204,8 +211,8 @@ h3::before {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #ffffff;
-  border: 1px solid #6e9b9b;
+  background-color: var(--primary-color);
+  border: 1px solid var(--el-color);
   border-radius: 15px;
 }
 
@@ -234,7 +241,7 @@ a {
 
 .foto-img {
   border-radius: 50%;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--primary-color);
 }
 
 .contacts {
@@ -276,7 +283,7 @@ a {
 }
 
 .edu-date {
-  color: #6e9b9b;
+  color: var(--el-color);
   font-size: 12px;
 }
 
@@ -324,12 +331,12 @@ a {
     margin-top: 95px;
     margin-left: 0;
     padding: 0 10px;
-    background-color: #ffffff;
+    background-color: var(--primary-color);
   }
 
   aside a {
-    color: #000000;
-    fill: #000000;
+    color: var(--font-color);
+    fill: var(--font-color);
     font-size: 0;
   }
 
@@ -346,11 +353,11 @@ a {
 
   aside h3 {
     margin: 5px 0 5px 0;
-    color: #000000;
+    color: var(--font-color);
   }
 
   aside .common-item {
-    color: #000000;
+    color: var(--font-color);
     padding-left: 0;
   }
 
@@ -391,7 +398,7 @@ a {
 
   footer a,
   .tablet a {
-    fill: #000000;
+    fill: var(--font-color);
   }
 
   .git {
@@ -409,7 +416,7 @@ a {
 
   footer {
     position: relative;
-    background-color: #6e9b9b;
+    background-color: var(--el-color);
     border-radius: 0 0 15px 15px;
     padding: 10px 0 5px;
   }
@@ -453,7 +460,7 @@ a {
   header {
     display: flex;
     justify-content: end;
-    background-color: #6e9b9b;
+    background-color: var(--el-color);
     border-radius: 15px 15px 0 0;
   }
 
@@ -486,14 +493,14 @@ a {
   .line {
     width: 100%;
     height: 3px;
-    background-color: #000000;
+    background-color: var(--font-color);
     transition: all 0.6s;
   }
 
   .navbar {
     width: 300px;
     height: 80%;
-    background-color: #6e9b9b;
+    background-color: var(--el-color);
     position: fixed;
     top: 50px;
     right: -300px;
@@ -518,7 +525,7 @@ a {
 
   .nav-link::before,
   .nav-link::after {
-    background: #e7c9bb;
+    background: var(--sec-color);
   }
 
   span {
@@ -528,7 +535,7 @@ a {
   span::before,
   span::after {
 
-    background: #e7c9bb;
+    background: var(--sec-color);
   }
 
   .nav-item {
