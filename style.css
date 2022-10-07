@@ -74,7 +74,7 @@ aside svg {
 
 .nav-link {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 87px;
   color: #000000;
 }
@@ -133,7 +133,6 @@ figure {
   gap: 10px;
 }
 
-
 img {
   width: 100%;
 }
@@ -173,13 +172,11 @@ footer {
 }
 
 .heading-name {
-
   color: #000000;
-  margin: 15px 0;
+  margin: 5px 0;
 }
 
 .name p {
-
   font-size: 14px;
 }
 
@@ -289,6 +286,10 @@ a {
   word-break: break-all;
 }
 
+.hamburger-menu {
+  display: none;
+}
+
 @media all and (max-width: 768px) {
   .name {
     height: auto;
@@ -316,29 +317,66 @@ a {
     margin: 0;
   }
 
+  aside {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 95px;
+    margin-left: 0;
+    padding: 0 10px;
+    background-color: #ffffff;
+  }
+
+  aside a {
+    color: #000000;
+    fill: #000000;
+    font-size: 0;
+  }
+
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .contacts ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  aside h3 {
+    margin: 5px 0 5px 0;
+    color: #000000;
+  }
+
+  aside .common-item {
+    color: #000000;
+    padding-left: 0;
+  }
+
+  .contacts li::before {
+    content: ' ';
+  }
+
   figcaption,
   p,
   li {
     line-height: 16px;
   }
 
-  aside {
-    display: none;
-  }
 
   .foto {
     display: grid;
     gap: 0;
   }
 
-  .foto img {
-    width: 90%;
+  .foto-img {
+    width: 100%;
+    padding: 0;
   }
-header img {
-  display: none;
-}
+
   main {
-    margin-top: 140px;
+    margin-top: 0;
     padding: 0 10px;
   }
 
@@ -372,7 +410,8 @@ header img {
   footer {
     position: relative;
     background-color: #6e9b9b;
-    padding: 2px 0;
+    border-radius: 0 0 15px 15px;
+    padding: 10px 0 5px;
   }
 
   footer img {
@@ -383,9 +422,8 @@ header img {
     margin-bottom: 20px;
   }
 
-  .contacts {
-    display: flex;
-    margin-top: 0;
+  .container {
+    flex-direction: column;
   }
 
   .tablet-skills {
@@ -411,6 +449,29 @@ header img {
     content: " ";
     padding-right: 0;
   }
+
+  header {
+    display: flex;
+    justify-content: end;
+    background-color: #6e9b9b;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .foto {
+    display: none;
+  }
+
+  .name .foto {
+    display: block;
+    width: 20%;
+    padding: 5px 0;
+    align-content: center;
+  }
+
+  .nav-list {
+    flex-direction: column;
+  }
+
   .hamburger-menu {
     width: 35px;
     height: 30px;
@@ -418,81 +479,192 @@ header img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #6e9b9b;
+
     cursor: pointer;
-}
-.line {
-  width: 100%;
-  height: 4px;
-  background-color: #000000;
-  transition: all 0.6s;
-}
-.navbar {
-  display: none;
-}
-header {
-  display: flex;
-  justify-content: end;
-  background-color: #6e9b9b;
-}
+  }
+
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    transition: all 0.6s;
+  }
+
+  .navbar {
+    width: 300px;
+    height: 80%;
+    background-color: #6e9b9b;
+    position: fixed;
+    top: 50px;
+    right: -300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20% 0 0 60%;
+    z-index: 1;
+    opacity: 0.9;
+    transition: right 0.8s cubic-bezier(1, 0, 0, 1);
+  }
+
+  .nav-list {
+    text-align: left;
+  }
+
+  .nav-link {
+    text-transform: uppercase;
+    position: relative;
+    display: inline;
+  }
+
+  .nav-link::before,
+  .nav-link::after {
+    background: #e7c9bb;
+  }
+
+  span {
+    white-space: nowrap;
+  }
+
+  span::before,
+  span::after {
+
+    background: #e7c9bb;
+  }
+
+  .nav-item {
+    padding: 0;
+  }
+
+  .active {
+    right: 0;
+  }
+
+  .change {
+    right: 0;
+  }
+
+  .change .line-1 {
+    transform: rotateZ(-405deg) translate(-10px, 10px)
+  }
+
+  .change .line-2 {
+    opacity: 0;
+  }
+
+  .change .line-3 {
+    transform: rotateZ(405deg) translate(-9px, -9px)
+  }
+
+  .active .line-1 {
+    transform: rotateZ(-405deg) translate(-10px, 10px);
+  }
+
+  .active .line-2 {
+    opacity: 0;
+  }
+
+  .active .line-3 {
+    transform: rotateZ(405deg) translate(-9px, -9px);
+  }
+
 
 }
 
-@media all and (min-width: 320px) and (max-width: 480px) {
+@media all and (max-width: 480px) {
   body {
     font-size: 12px;
   }
+
   .name h2 {
     margin: 0;
     font-size: 16px;
     letter-spacing: 2px;
     line-height: 1.2;
-}
-.name .foto {
-  display: none;
-}
-header {
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 15px 15px 0 0;
-}
-header .foto {
-  width: 17%;
-  padding: 5px 0;
-  align-content: center;
-}
-.name p, h4, figcaption {
-  font-size: 12px;
-  line-height: 1.2;
-}
-.name div {
-  padding: 0;
-}
-.name {
-  height: auto;
-}
-main {
-  margin-top: 90px;
-}
-code {
-  font-size: 8px;
-}
-section h3 {
-  margin: 2px;
-  font-size: 14px;
-}
-footer {
-  border-radius: 0 0 15px 15px;
-}
-.article-wrapper, figure {
-  grid-template-columns: 1fr;
-  gap: 2px;
-}
-article img {
-  height: auto;
-}
-.projects {
-  margin-bottom: 5px;
-}
-}
+  }
 
+  .name .foto {
+    display: none;
+  }
+
+  header {
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px 15px 0 0;
+  }
+
+  header img {
+    display: block;
+    width: 17%;
+    padding: 5px 0;
+    align-content: center;
+  }
+  .name p,
+  h4,
+  figcaption {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+.name p {
+  padding: 3px 0;
+}
+  .name div {
+    padding: 0;
+  }
+
+  .name {
+    height: auto;
+  }
+
+  main {
+    margin-top: 2px;
+  }
+
+  code {
+    font-size: 8px;
+  }
+
+  section h3 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  h3::before {
+    font-size: 12px;
+  }
+
+  footer {
+    border-radius: 0 0 15px 15px;
+  }
+
+  .article-wrapper,
+  figure {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  article img {
+    height: auto;
+  }
+
+  .projects {
+    margin-bottom: 5px;
+  }
+
+  header .foto {
+    display: block;
+    width: 10%;
+    margin-left: 7px;
+  }
+header .heading-name  {
+  display: block;
+}
+  aside {
+    margin-top: 55px;
+  }
+  .heading-name {
+    display: none;
+  }
+  aside h3 {
+    margin: 0;
+  }
+}
